@@ -18,7 +18,6 @@ class PostShowDemo extends StatelessWidget{
         children: <Widget>[
           AspectRatio(aspectRatio: 16/9,
             child:Image.network(post.imageUrl,fit: BoxFit.cover,),
-
           ),
 
           Container(
@@ -35,7 +34,6 @@ class PostShowDemo extends StatelessWidget{
             ),
           )
         ],
-
       ),
     );
   }
