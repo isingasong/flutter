@@ -4,6 +4,7 @@ import 'package:flutter_app2/demo/appbar_demo.dart';
 import 'package:flutter_app2/demo/bottomNavigationBar_Demo.dart';
 import 'package:flutter_app2/demo/drawer_demo.dart';
 import 'package:flutter_app2/demo/form_demo.dart';
+import 'package:flutter_app2/demo/material_demo.dart';
 import 'package:flutter_app2/demo/navigationbar_demo.dart';
 import 'package:flutter_app2/demo/tab_demo.dart';
 import 'model/post.dart';
@@ -18,10 +19,11 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home:Home(),
-      initialRoute: '/form',
+      initialRoute: '/material',
       routes: {
         '/form' :(context) => ForeDemo(),
         '/about':(context) => Page(title: 'About'),
+        '/material':(context) =>MaterialDemo(),
       },
       theme: ThemeData(
           primarySwatch: Colors.yellow,
