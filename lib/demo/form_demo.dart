@@ -5,6 +5,11 @@ class ForeDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      appBar: AppBar(
+        title: Text('FormDemo'),
+        elevation: 0.0,
+        centerTitle: true,
+      ),
       body: Theme(
           data: Theme.of(context).copyWith(primaryColor: Colors.teal),
           child: Container(
