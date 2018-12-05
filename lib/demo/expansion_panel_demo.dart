@@ -72,7 +72,7 @@ class _ExpansionPanelState extends State<ExpansionPanelDemo> {
                     headerBuilder: (BuildContext context, bool isExpanded) {
                       return Container(
                         padding: EdgeInsets.all(10.0),
-                        child: Text(item.headerText),
+                        child: Text(item.headerText,style: Theme.of(context).textTheme.title,),
                       );
                     },
                     body: item.body,

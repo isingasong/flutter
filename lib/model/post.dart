@@ -4,11 +4,14 @@ class Post{
     this.author,
     this.imageUrl,
     this.description,
+
 });
   final String title;
   final String author;
   final String imageUrl;
   final String description;
+
+  bool selected = false;
 }
 
 final List<Post> posts = [

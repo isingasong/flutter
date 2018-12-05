@@ -3,10 +3,13 @@ import 'package:flutter_app2/demo/alert_dialog_demo.dart';
 import 'package:flutter_app2/demo/bottom_sheet_demo.dart';
 import 'package:flutter_app2/demo/button_demo.dart';
 import 'package:flutter_app2/demo/checkbox_demo.dart';
+import 'package:flutter_app2/demo/chip_demo.dart';
+import 'package:flutter_app2/demo/data_table_demo.dart';
 import 'package:flutter_app2/demo/date_time_demo.dart';
 import 'package:flutter_app2/demo/expansion_panel_demo.dart';
 import 'package:flutter_app2/demo/flatingActionButton_demo.dart';
 import 'package:flutter_app2/demo/form_demo.dart';
+import 'package:flutter_app2/demo/paginated_data_table_demo.dart';
 import 'package:flutter_app2/demo/radio_demo.dart';
 import 'package:flutter_app2/demo/simple_dialog_demo.dart';
 import 'package:flutter_app2/demo/slider_demo.dart';
@@ -40,13 +43,14 @@ class MaterialDemo extends StatelessWidget {
           ListItem(title: 'BottomSheetDemo', page: BottomSheetDemo()),
           ListItem(title: 'SnackBarDemo', page: SnackBarDemo()),
           ListItem(title: 'ExpansionPanelDemo', page: ExpansionPanelDemo()),
+          ListItem(title: 'ChipDemo', page: ChipDemo()),
+          ListItem(title: 'DataTableDemo', page: DataTableDemo()),
+          ListItem(title: 'PaginatedDataTableDemo', page: PaginatedDataTableDemo()),
         ],
       ),
     );
   }
 }
-
-
 
 class ListItem extends StatelessWidget {
   final String title;
