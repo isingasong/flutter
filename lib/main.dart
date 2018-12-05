@@ -6,6 +6,8 @@ import 'package:flutter_app2/demo/drawer_demo.dart';
 import 'package:flutter_app2/demo/form_demo.dart';
 import 'package:flutter_app2/demo/material_demo.dart';
 import 'package:flutter_app2/demo/navigationbar_demo.dart';
+import 'package:flutter_app2/demo/state/state_management.dart';
+import 'package:flutter_app2/demo/state/state_management_stateful.dart';
 import 'package:flutter_app2/demo/tab_demo.dart';
 import 'model/post.dart';
 import 'package:flutter_app2/demo/silver_demo.dart';
@@ -19,11 +21,13 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home:Home(),
-      initialRoute: '/material',
+      initialRoute: '/state-manangements',
       routes: {
         '/form' :(context) => ForeDemo(),
         '/about':(context) => Page(title: 'About'),
         '/material':(context) =>MaterialDemo(),
+        '/state-manangement':(context) =>StateManagementDemo(),
+        '/state-manangements':(context) =>StateManagementStatefulDemo(),
       },
       theme: ThemeData(
           primarySwatch: Colors.yellow,

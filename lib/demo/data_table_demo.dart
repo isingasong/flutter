@@ -48,12 +48,12 @@ class _DataTableState extends State<DataTableDemo> {
                 ],
                 rows: posts.map((post) {
                   return DataRow(
-                    selected: post.selected,
+//                    selected: post.selected,
                       onSelectChanged: (bool value){
                       setState(() {
-                        if(post.selected != value) {
-                          post.selected = value;
-                        }
+//                        if(post.selected != value) {
+//                          post.selected = value;
+//                        }
                       });
                       },
                       cells: [
