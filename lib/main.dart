@@ -1,6 +1,7 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app2/demo/appbar_demo.dart';
+import 'package:flutter_app2/demo/bloc/bloc.demo.dart';
 import 'package:flutter_app2/demo/bottomNavigationBar_Demo.dart';
 import 'package:flutter_app2/demo/drawer_demo.dart';
 import 'package:flutter_app2/demo/form_demo.dart';
@@ -23,7 +24,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Home(),
-      initialRoute: '/rxdart',
+      initialRoute: '/bloc',
       routes: {
         '/form': (context) => ForeDemo(),
         '/about': (context) => Page(title: 'About'),
@@ -32,6 +33,7 @@ class App extends StatelessWidget {
         '/state-manangements': (context) => StateManagementStatefulDemo(),
         '/stream': (context) => StreamDemo(),
         '/rxdart': (context) => RxDartDemo(),
+        '/bloc': (context) => BlocDemo(),
       },
       theme: ThemeData(
           primarySwatch: Colors.yellow,
