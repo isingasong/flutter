@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-class StateManagementStatefulDemo extends StatefulWidget {
-  @override
-  _StateManagementStatefulDemoState createState() =>
-      _StateManagementStatefulDemoState();
-}
-
-class _StateManagementStatefulDemoState
-    extends State<StateManagementStatefulDemo> {
+class StateManagementStatefulDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScopedModel(
@@ -34,8 +27,9 @@ class _StateManagementStatefulDemoState
 class CounterWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ScopedModelDescendant<CounterModel> (
-      builder: (context,_,model) => ActionChip(label: Text('${model.count}'), onPressed: model.increaseCount),
+    return ScopedModelDescendant<CounterModel>(
+      builder: (context, _, model) => ActionChip(
+          label: Text('${model.count}'), onPressed: model.increaseCount),
     );
   }
 }
@@ -76,5 +70,6 @@ class CounterModel extends Model {
 
   void increaseCount() {
     _count++;
+    notifyListeners();
   }
 }

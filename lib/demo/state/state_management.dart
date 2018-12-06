@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scoped_model/scoped_model.dart';
 class StateManagementDemo extends StatelessWidget {
   int _count = 0;
   @override
@@ -18,5 +19,33 @@ class StateManagementDemo extends StatelessWidget {
         print(_count);
       }),
     );
+  }
+}
+
+class Counter extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return null;
+  }
+
+}
+
+class CounterWrapper  extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return null;
+  }
+}
+
+class CounterModel extends Model {
+  int _count = 0;
+
+  int get count => _count;
+
+  void increaseCount() {
+    _count++;
+    notifyListeners();
   }
 }
