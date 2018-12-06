@@ -6,8 +6,10 @@ import 'package:flutter_app2/demo/drawer_demo.dart';
 import 'package:flutter_app2/demo/form_demo.dart';
 import 'package:flutter_app2/demo/material_demo.dart';
 import 'package:flutter_app2/demo/navigationbar_demo.dart';
+import 'package:flutter_app2/demo/rxdart/rxdart_demo.dart';
 import 'package:flutter_app2/demo/state/state_management.dart';
 import 'package:flutter_app2/demo/state/state_management_stateful.dart';
+import 'package:flutter_app2/demo/stream/stream_demo.dart';
 import 'package:flutter_app2/demo/tab_demo.dart';
 import 'model/post.dart';
 import 'package:flutter_app2/demo/silver_demo.dart';
@@ -20,14 +22,16 @@ class App extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:Home(),
-      initialRoute: '/state-manangements',
+      home: Home(),
+      initialRoute: '/rxdart',
       routes: {
-        '/form' :(context) => ForeDemo(),
-        '/about':(context) => Page(title: 'About'),
-        '/material':(context) =>MaterialDemo(),
-        '/state-manangement':(context) =>StateManagementDemo(),
-        '/state-manangements':(context) =>StateManagementStatefulDemo(),
+        '/form': (context) => ForeDemo(),
+        '/about': (context) => Page(title: 'About'),
+        '/material': (context) => MaterialDemo(),
+        '/state-manangement': (context) => StateManagementDemo(),
+        '/state-manangements': (context) => StateManagementStatefulDemo(),
+        '/stream': (context) => StreamDemo(),
+        '/rxdart': (context) => RxDartDemo(),
       },
       theme: ThemeData(
           primarySwatch: Colors.yellow,
@@ -62,10 +66,18 @@ class Home extends StatelessWidget {
                 indicatorSize: TabBarIndicatorSize.label,
                 indicatorWeight: 1.0,
                 tabs: <Widget>[
-                  Tab(icon: Icon(Icons.local_florist),),
-                  Tab(icon: Icon(Icons.change_history),),
-                  Tab(icon: Icon(Icons.directions_bike),),
-                  Tab(icon: Icon(Icons.view_quilt),),
+                  Tab(
+                    icon: Icon(Icons.local_florist),
+                  ),
+                  Tab(
+                    icon: Icon(Icons.change_history),
+                  ),
+                  Tab(
+                    icon: Icon(Icons.directions_bike),
+                  ),
+                  Tab(
+                    icon: Icon(Icons.view_quilt),
+                  ),
                 ],
               ),
             ),
