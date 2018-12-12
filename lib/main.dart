@@ -1,9 +1,18 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app2/demo/animation/animation_demo.dart';
 import 'package:flutter_app2/demo/appbar_demo.dart';
+import 'package:flutter_app2/demo/bloc/bloc.demo.dart';
 import 'package:flutter_app2/demo/bottomNavigationBar_Demo.dart';
 import 'package:flutter_app2/demo/drawer_demo.dart';
+import 'package:flutter_app2/demo/form_demo.dart';
+import 'package:flutter_app2/demo/http/http_demo.dart';
+import 'package:flutter_app2/demo/material_demo.dart';
 import 'package:flutter_app2/demo/navigationbar_demo.dart';
+import 'package:flutter_app2/demo/rxdart/rxdart_demo.dart';
+import 'package:flutter_app2/demo/state/state_management.dart';
+import 'package:flutter_app2/demo/state/state_management_stateful.dart';
+import 'package:flutter_app2/demo/stream/stream_demo.dart';
 import 'package:flutter_app2/demo/tab_demo.dart';
 import 'model/post.dart';
 import 'package:flutter_app2/demo/silver_demo.dart';
@@ -16,12 +25,23 @@ class App extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:Home(),
+      home: Home(),
+      initialRoute: '/animation',
       routes: {
-        '/about':(context) => Page(title: 'About'),
+        '/form': (context) => ForeDemo(),
+        '/about': (context) => Page(title: 'About'),
+        '/material': (context) => MaterialDemo(),
+        '/state-manangement': (context) => StateManagementDemo(),
+        '/state-manangements': (context) => StateManagementStatefulDemo(),
+        '/stream': (context) => StreamDemo(),
+        '/rxdart': (context) => RxDartDemo(),
+        '/bloc': (context) => BlocDemo(),
+        '/http': (context) => HttpDemo(),
+        '/animation': (context) => AnimationDemo(),
       },
       theme: ThemeData(
           primarySwatch: Colors.yellow,
+          accentColor: Colors.teal,
           highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
           splashColor: Colors.white70),
     );
@@ -52,10 +72,18 @@ class Home extends StatelessWidget {
                 indicatorSize: TabBarIndicatorSize.label,
                 indicatorWeight: 1.0,
                 tabs: <Widget>[
-                  Tab(icon: Icon(Icons.local_florist),),
-                  Tab(icon: Icon(Icons.change_history),),
-                  Tab(icon: Icon(Icons.directions_bike),),
-                  Tab(icon: Icon(Icons.view_quilt),),
+                  Tab(
+                    icon: Icon(Icons.local_florist),
+                  ),
+                  Tab(
+                    icon: Icon(Icons.change_history),
+                  ),
+                  Tab(
+                    icon: Icon(Icons.directions_bike),
+                  ),
+                  Tab(
+                    icon: Icon(Icons.view_quilt),
+                  ),
                 ],
               ),
             ),
