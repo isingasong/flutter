@@ -14,7 +14,9 @@ class _AppState extends State<App> {
     return MaterialApp(
       home: Home(),
       theme: ThemeData(
-        primarySwatch: Colors.lightBlue    // 设置primary颜色，主题颜色
+        primarySwatch: Colors.lightBlue,  // 设置primary颜色，主题颜色
+        highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+        splashColor: Colors.white70,
       ),
     );
   }
