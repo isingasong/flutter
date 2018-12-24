@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:myflutter/demo/basic_demo.dart';
 import 'package:myflutter/demo/breakfast_demo.dart';
 import 'package:myflutter/demo/drawer_demo.dart';
 import 'package:myflutter/demo/hotel_demo.dart';
+import 'package:myflutter/demo/layout_demo.dart';
 import 'package:myflutter/demo/listview_demo.dart';
+import 'package:myflutter/demo/size_demo.dart';
 
 class RowingDemo extends StatefulWidget {
   @override
@@ -53,19 +56,8 @@ class _RowingDemoState extends State<RowingDemo> {
           ),
           body: TabBarView(children: <Widget>[
             ListViewDemo(),
-            Icon(
-              Icons.wb_sunny,
-              size: 128,
-              color: Colors.yellow,
-            ),
-            Container(
-              color: Colors.grey,
-              child: Icon(
-                Icons.ac_unit,
-                size: 128,
-                color: Colors.white,
-              ),
-            ),
+            BasicDemo(),
+            SizeBoxDemo(),
           ]),
           drawer: DrawerDemo(),
         ));
