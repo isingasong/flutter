@@ -6,6 +6,7 @@ import 'package:myflutter/demo/hotel_demo.dart';
 import 'package:myflutter/demo/layout_demo.dart';
 import 'package:myflutter/demo/listview_demo.dart';
 import 'package:myflutter/demo/size_demo.dart';
+import 'package:myflutter/demo/view_demo.dart';
 
 class RowingDemo extends StatefulWidget {
   @override
@@ -52,6 +53,7 @@ class _RowingDemoState extends State<RowingDemo> {
                   Tab(
                     icon: Icon(Icons.ac_unit),
                   ),
+
                 ]),
           ),
           body: TabBarView(children: <Widget>[
