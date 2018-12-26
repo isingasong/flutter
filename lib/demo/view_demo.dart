@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myflutter/demo/form_demo.dart';
 import 'package:myflutter/demo/gridveiw_builder_demo.dart';
 import 'package:myflutter/demo/gridview_count_demo.dart';
 import 'package:myflutter/demo/gridview_extend_demo.dart';
@@ -21,6 +22,7 @@ class ViewDemo extends StatelessWidget {
         GridViewExtendDemo(),
         SliverDemo(),
         NavigationDemo(),
+        FormDemo(),
       ],
     );
   }
