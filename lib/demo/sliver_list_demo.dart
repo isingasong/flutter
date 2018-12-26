@@ -23,6 +23,7 @@ class SliverListDemo extends StatelessWidget {
                 child: Image.network(
                   posts[index].imageUrl,
                   fit: BoxFit.cover,
+
                 ),
               ),
             ),
