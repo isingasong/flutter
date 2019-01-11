@@ -51,7 +51,13 @@ class _LoginDemoState extends State<LoginDemo> {
         key: loginFormKey,
         child: Container(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            Image.asset('images/ic_launcher.png'),
+            SizedBox(
+              height: 66.0,
+            ),
+
             TextFormField(
               decoration: InputDecoration(labelText: 'Account', helperText: ''),
               onSaved: (value) {

@@ -9,11 +9,11 @@ class ListItemDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.lightBlueAccent,
+      color: Colors.grey[300],
       child: Column(
         children: <Widget>[
           ListTile(
-            title: Text(title,style: TextStyle(color: Colors.white,fontSize: 18.0,fontStyle: FontStyle.italic),),
+            title: Text(title,style: TextStyle(color: Colors.black,fontSize: 18.0,fontStyle: FontStyle.italic),),
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => page),
